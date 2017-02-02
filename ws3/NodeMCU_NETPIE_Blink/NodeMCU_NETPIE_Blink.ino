@@ -3,12 +3,15 @@
 #include <ESP8266WiFi.h>
 #include <MicroGear.h>
 
-const char* ssid     = "itbakery-wifi"; //your ssid
-const char* password = "itbakery@9"; //your password
+//const char* ssid     = "itbakery-wifi"; //your ssid
+//const char* password = "itbakery@9"; //your password
 
-#define APPID   "KobSmartFarm" //your AppID
-#define KEY     "SIpLYGJzlBD7ZRl" //your Key
-#define SECRET  "uZSvYG6oyoNdVeRiJNEFlDhzK" //your Secret
+const char* ssid     = "dragons"; //your ssid
+const char* password = "dragonsoffice"; //your password
+
+#define APPID   "TrainIoT" //your AppID
+#define KEY     "Ct0kTCsmAEQphIk" //your Key
+#define SECRET  "9AScuAJcCiAHfK4w13zW5P65E" //your Secret
 #define ALIAS   "KobNodeMCU12E"
 
 WiFiClient client;

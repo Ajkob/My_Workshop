@@ -9,8 +9,13 @@
 
 #include <ESP8266WiFi.h>
 
-const char* ssid = "itbakery-wifi";
-const char* password = "itbakery@9";
+#define ledPin D1 //GPIO5
+
+//const char* ssid = "itbakery-wifi";
+//const char* password = "itbakery@9";
+
+const char* ssid = "dragons";
+const char* password = "dragonsoffice";
 
 // Create an instance of the server
 // specify the port to listen on as an argument
@@ -20,9 +25,9 @@ void setup() {
   Serial.begin(115200);
   delay(10);
 
-  // prepare GPIO5
-  pinMode(5, OUTPUT);
-  digitalWrite(5, 0);
+  // prepare GPIO
+  pinMode(ledPin, OUTPUT);
+  digitalWrite(ledPin, 0);
   
   // Connect to WiFi network
   Serial.println();
@@ -78,7 +83,7 @@ void loop() {
   }
 
   // Set GPIO5 according to the request
-  digitalWrite(5, val);
+  digitalWrite(ledPin, val);
   
   client.flush();
 

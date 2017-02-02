@@ -17,13 +17,13 @@ void setup() {
 }
 
 void loop() {
-  Serial.println("scan start");
+  Serial.println("Scan start");
 
   // WiFi.scanNetworks will return the number of networks found
   int n = WiFi.scanNetworks();
-  Serial.println("scan done");
+  Serial.println("Scan done");
   if (n == 0)
-    Serial.println("no networks found");
+    Serial.println("No networks found");
   else
   {
     Serial.print(n);
@@ -37,7 +37,7 @@ void loop() {
       Serial.print(" (");
       Serial.print(WiFi.RSSI(i));
       Serial.print(")");
-      Serial.println((WiFi.encryptionType(i) == ENC_TYPE_NONE)?" ":"*");
+      Serial.println((WiFi.encryptionType(i) == ENC_TYPE_NONE)?" Open":" ***Encrypted");
       delay(10);
     }
   }
